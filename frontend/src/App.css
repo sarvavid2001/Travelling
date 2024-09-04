@@ -1,0 +1,58 @@
+/* Global Reset for Body and HTML */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevents horizontal overflow */
+  box-sizing: border-box; /* Ensure padding and borders don't affect width */
+}
+
+/* Hero Section Container */
+.hero-section {
+  position: relative;
+  color: white;
+  text-align: center;
+  height: 73vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensure the section takes the full width */
+  box-sizing: border-box; /* Ensure padding and borders don't affect width */
+}
+
+/* Background Image */
+.hero-image {
+  width: 100%; /* Ensure the image takes the full width of the section */
+  height: 100%; /* Ensure the image takes the full height of the section */
+  object-fit: cover; /* Ensure the image covers the entire area */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box; /* Ensure padding and borders don't affect width */
+}
+
+/* Hero Content Container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 20px; /* Optional: add padding to text */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Optional: add text shadow for readability */
+}
+
+/* h1 Tag Styling */
+.hero-content h1 {
+  font-size: 3.5rem; /* Larger text size */
+  color: #ffffff; /* Deep red, often associated with Nepali cultural colors #8d7819 */
+  margin-bottom: 20px;
+}
+
+/* p Tag Styling */
+.hero-content p {
+  font-size: 1.2rem; /* Smaller text size */
+  color: #f1faee; /* Light, subtle color */
+  margin-top: 0;
+}

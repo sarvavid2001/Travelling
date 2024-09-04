@@ -1,0 +1,107 @@
+/* Navbar container */
+.navbar {
+    background: transparent; /* Transparent background to show the hero image */
+    position: absolute; /* Position it over the hero image */
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it appears above the hero section */
+  }
+  
+  .navbar .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Add some padding for spacing */
+  }
+  
+  /* Logo styling */
+  .navbar-logo h1 {
+    color: white;
+    font-family: 'Lora', serif; /* Example font family */
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .navbar-logo a {
+    text-decoration: none;
+  }
+  
+  /* Navbar links */
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    transition: all 0.3s ease;
+    justify-content: space-between; /* Distribute space between items */
+    gap: 27px;
+  }
+  
+  /* Adjust spacing between navbar items */
+  .navbar-links li {
+    margin: 0 20px; /* Decrease or increase spacing as needed */
+  }
+  
+  /* Links hidden on mobile unless menu is open */
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* For mobile view */
+  .navbar-links.open {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .navbar-links li {
+    margin: 15px 0; /* Adjust spacing between items in mobile view */
+  }
+  
+  /* Search icon styling */
+  .search-icon {
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Menu toggle button */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Display menu toggle on mobile view */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  /* Close icon inside the menu */
+  .close-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  

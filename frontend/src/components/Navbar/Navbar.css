@@ -1,59 +1,83 @@
 /* Navbar container */
 .navbar {
-    background: transparent; /* Transparent background to show the hero image */
+    background: linear-gradient(90deg, #5F8378, #8B7D6B, #B95E92); /* Gradient with three colors */
     position: absolute; /* Position it over the hero image */
     top: 0;
     width: 100%;
     z-index: 100; /* Ensure it appears above the hero section */
-  }
-  
-  .navbar .container {
+    border-top: 2px dotted white; /* Dotted line above the navbar */
+    border-bottom: 2px dotted white; /* Dotted line below the navbar */
+}
+
+.navbar .container {
     max-width: 1080px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px; /* Add some padding for spacing */
-  }
-  
-  /* Logo styling */
-  .navbar-logo h1 {
-    color: white;
-    font-family: 'Lora', serif; /* Example font family */
-    font-size: 24px;
+}
+
+.navbar-logo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 34px;
     font-weight: 700;
     margin: 0;
-  }
-  
-  .navbar-logo a {
+    background: linear-gradient(45deg, #e91e63, #3f51b5, #9c27b0, #e91e63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1.5px;
+}
+
+
+.navbar-logo a {
     text-decoration: none;
-  }
-  
-  /* Navbar links */
-  .navbar-links {
+}
+
+
+/* Import Cursive Font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+/* Navbar links container */
+.navbar-links {
     display: flex;
     list-style: none;
     transition: all 0.3s ease;
     justify-content: space-between; /* Distribute space between items */
-    gap: 27px;
-  }
-  
-  /* Adjust spacing between navbar items */
-  .navbar-links li {
-    margin: 0 20px; /* Decrease or increase spacing as needed */
-  }
-  
-  /* Links hidden on mobile unless menu is open */
-  .navbar-links a {
+    gap: 27px; /* Space between items */
+}
+
+/* Adjust spacing between navbar items */
+.navbar-links li {
+    margin: 0; /* Remove additional margins */
+}
+
+/* Navbar links styling */
+.navbar-links a {
     color: white;
     text-decoration: none;
-    font-family: 'Lora', serif;
-    font-size: 16px;
+    font-family: 'Dancing Script', cursive; /* Apply the cursive font */
+    font-size: 18px;
     font-weight: 600;
-  }
-  
-  /* For mobile view */
-  .navbar-links.open {
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+
+/* Change link color when hovered */
+.navbar-links a:hover {
+    color: #00ffaa; /* Change to green when the link is hovered */
+}
+
+/* Change link color when clicked */
+.navbar-links a:active {
+    color: green; /* Change to green when the link is clicked */
+}
+
+/* For mobile view */
+.navbar-links.open {
     display: block;
     position: absolute;
     top: 60px;
@@ -62,46 +86,45 @@
     background: rgba(0, 0, 0, 0.9);
     padding: 20px 0;
     text-align: center;
-  }
-  
-  .navbar-links li {
+}
+
+.navbar-links li {
     margin: 15px 0; /* Adjust spacing between items in mobile view */
-  }
-  
-  /* Search icon styling */
-  .search-icon {
+}
+
+/* Search icon styling */
+.search-icon {
     color: white;
     cursor: pointer;
     font-size: 18px;
-  }
-  
-  /* Menu toggle button */
-  .menu-toggle {
+}
+
+/* Menu toggle button */
+.menu-toggle {
     display: none;
     background: none;
     border: none;
     color: white;
     font-size: 30px;
     cursor: pointer;
-  }
-  
-  /* Display menu toggle on mobile view */
-  @media (max-width: 768px) {
+}
+
+/* Display menu toggle on mobile view */
+@media (max-width: 768px) {
     .navbar-links {
-      display: none;
+        display: none;
     }
-  
+
     .menu-toggle {
-      display: block;
+        display: block;
     }
-  }
-  
-  /* Close icon inside the menu */
-  .close-icon {
+}
+
+/* Close icon inside the menu */
+.close-icon {
     position: absolute;
     right: 20px;
     top: 20px;
     font-size: 24px;
     cursor: pointer;
-  }
-  
+}

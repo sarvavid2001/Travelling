@@ -3,12 +3,13 @@
     position: relative;
     color: white;
     text-align: center;
-    height: 65vh; /* Increased height to show more of the image */
+    height: 100vh; /* Full viewport height */
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%; /* Ensure the section takes the full width */
+    margin-top: 40px;
 }
 
 /* Background Image */
@@ -16,7 +17,7 @@
     width: 100%; /* Ensure the image takes the full width of the section */
     height: 100%; /* Ensure the image takes the full height of the section */
     object-fit: cover; /* Ensure the image covers the entire area */
-    object-position: top; /* Align the image to emphasize the top part */
+    object-position: top; /* Emphasize the top part of the image */
     position: absolute;
     top: 0;
     left: 0;
@@ -30,6 +31,7 @@
     max-width: 1200px;
     padding: 20px; /* Optional: add padding to text */
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Optional: add text shadow for readability */
+    margin: 0 auto; /* Center the content */
 }
 
 /* h1 Tag Styling */

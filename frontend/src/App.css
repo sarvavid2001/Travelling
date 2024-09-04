@@ -13,7 +13,7 @@ body, html {
   position: relative;
   color: white;
   text-align: center;
-  height: 73vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;

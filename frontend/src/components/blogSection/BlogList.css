@@ -1,0 +1,11 @@
+.custom-skeleton {
+    width: 100%; /* Adjust this value as per your requirement */
+  }
+  
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Centering content horizontally */
+    padding: 30px; /* Add padding for spacing */
+  }

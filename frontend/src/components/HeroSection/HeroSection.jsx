@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import './HeroSection.css';
+import React, { useState, useEffect } from "react";
+import "./HeroSection.css";
 
 // Import images
 
-import image1 from '/src/assets/kunda.jpeg';
-import image2 from '/src/assets/mountains.jpeg';
-import image3 from '/src/assets/villageimage.jpeg';
+import image1 from "/src/assets/kunda.jpeg";
+import image2 from "/src/assets/mountains.jpeg";
+import image3 from "/src/assets/villageimage.jpeg";
 
 const images = [image1, image2, image3];
 
@@ -27,12 +27,13 @@ function HeroSection() {
       <div className="hero-content">
         <h1>Explore the Beauty of Nepal</h1>
         <p>Discover stories, travel guides, and cultural insights.</p>
+        {/* <div className="py-10">
+          <button className="bg-green-600 text-white px-6 py-3 rounded-full text-lg hover:bg-green-700">
+            Read More
+          </button>
+        </div> */}
       </div>
-      <img
-        src={images[currentImageIndex]}
-        alt="Nepal"
-        className="hero-image"
-      />
+      <img src={images[currentImageIndex]} alt="Nepal" className="hero-image" />
     </div>
   );
 }

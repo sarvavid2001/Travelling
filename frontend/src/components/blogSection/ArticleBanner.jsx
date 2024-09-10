@@ -12,7 +12,7 @@ const ArticleBanner = ({ id, image, title, description, link, overlayText, theme
         backgroundRepeat: 'no-repeat', 
       }}
     >
-      <div className="flex flex-col lg:flex-row items-center lg:space-x-8">
+      <div className="flex ml-10 flex-col lg:flex-row items-center lg:space-x-20">
         {/* Image Section */}
         <div className="w-full lg:w-1/2 mb-6 lg:mb-0 relative bg-green-700 p-4 rounded-lg transform transition-transform duration-500 hover:scale-105">
           <img
@@ -26,12 +26,16 @@ const ArticleBanner = ({ id, image, title, description, link, overlayText, theme
         </div>
 
         {/* Text Section */}
-        <div className="w-full lg:w-1/3 flex flex-col justify-center p-4 rounded-lg bg-white shadow-lg transform transition-transform duration-500 hover:scale-105">
+        <div className="lg:w-1/3 flex flex-col justify-center p-4 rounded-lg  shadow-lg transform transition-transform duration-500 hover:scale-105">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-black">{title}</h2>
           <p className="text-base lg:text-lg text-gray-700 mb-4">{description}</p>
 
           {/* Use Link for navigation to the article detail page */}
-          <Link to={link} className="inline-flex bg-green-600 text-white py-2 px-4 rounded-lg text-sm lg:text-base hover:bg-green-700 transition-colors duration-300">
+          <Link 
+            to={link} 
+            className="text-green-600 hover:text-green-800 text-lg lg:text-base transition-colors duration-300"
+            style={{ padding: 0 }} // No padding, so it looks like regular text
+          >
             Read More <span className="ml-1">→</span>
           </Link>
         </div>

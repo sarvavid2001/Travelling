@@ -9,6 +9,11 @@ import BlogAdmin from "./components/blogSection/BlogAdmin";
 import BlogDetails from "./components/blogSection/BlogDetails";
 import ArticleList from "./components/blogSection/ArticleList";
 import ArticleDetail from "./components/blogSection/ArticleDetail"; // Ensure this path is correct
+import Discover from "./components/discover/Discover";
+import Tech from "./components/tech/Tech";
+import Festival from "./components/festival/Festival";
+import Sports from "./components/sports/Sports";
+import Stories from "./components/stories/Stories";
 import "./App.css";
 
 function App() {
@@ -49,6 +54,12 @@ function App() {
         <Routes>
           <Route path="/" element={<ArticleList />} />
           <Route path="/article/:id" element={<ArticleDetail />} />
+          <Route path="/discover" element={<ArticleList />} />
+          <Route path="/tech" element={<Tech />} />
+          <Route path="/festival-events" element={<Festival />} />
+          <Route path="/sports" element={<Sports />} />
+          <Route path="/stories" element={<Stories />} />
+          
           <Route path="/admin" element={<BlogAdmin />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
         </Routes>

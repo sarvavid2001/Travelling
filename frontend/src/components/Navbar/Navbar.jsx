@@ -1,6 +1,7 @@
 import React from "react";
-import { FaSearch, FaTimes } from "react-icons/fa"; // Import the search and close icons
-import "./Navbar.css"
+import { FaSearch, FaTimes } from "react-icons/fa"; 
+import { Link } from "react-router-dom"; // Import Link for navigation
+import "./Navbar.css";
 
 function Navbar({ onSectionClick, activeSection }) {
   const [isMenuOpen, setMenuOpen] = React.useState(false);
@@ -18,25 +19,27 @@ function Navbar({ onSectionClick, activeSection }) {
     <nav className="navbar">
       <div className="container">
         <div className="navbar-logo">
-          <a href="/" aria-label="Home">
+          <Link to="/" aria-label="Home">
             <h1>Sarvavid</h1>
-          </a>
+          </Link>
         </div>
         <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
           <li className={activeSection === "places-to-visit" ? "active" : ""}>
-            <a href="#places-to-visit" onClick={() => handleLinkClick("places-to-visit")}>Places to Visit</a>
+            <Link to="/discover" onClick={() => handleLinkClick("places-to-visit")}>
+              Places to Visit
+            </Link>
           </li>
-          <li className={activeSection === "things-to-do" ? "active" : ""}>
-            <a href="#things-to-do" onClick={() => handleLinkClick("things-to-do")}>Things to Do</a>
+          <li className={activeSection === "tech" ? "active" : ""}>
+            <Link to="/tech" onClick={() => handleLinkClick("tech")}>Tech</Link>
           </li>
           <li className={activeSection === "festival-events" ? "active" : ""}>
-            <a href="#festival-events" onClick={() => handleLinkClick("festival-events")}>Festival and Events</a>
+            <Link to="/festival-events" onClick={() => handleLinkClick("festival-events")}>Festival and Events</Link>
           </li>
-          <li className={activeSection === "plan-your-trip" ? "active" : ""}>
-            <a href="#plan-your-trip" onClick={() => handleLinkClick("plan-your-trip")}>Plan Your Trip</a>
+          <li className={activeSection === "sports" ? "active" : ""}>
+            <Link to="/sports" onClick={() => handleLinkClick("sports")}>Sports</Link>
           </li>
-          <li className={activeSection === "stories-about-places" ? "active" : ""}>
-            <a href="#stories-about-places" onClick={() => handleLinkClick("stories-about-places")}>Stories</a>
+          <li className={activeSection === "stories" ? "active" : ""}>
+            <Link to="/stories" onClick={() => handleLinkClick("stories")}>Stories</Link>
           </li>
           {isMenuOpen && (
             <li className="close-icon" onClick={toggleMenu}>
@@ -45,10 +48,10 @@ function Navbar({ onSectionClick, activeSection }) {
           )}
         </ul>
         <div className="search-icon">
-          <FaSearch size={20} /> {/* Search icon */}
+          <FaSearch size={20} />
         </div>
         <button className="menu-toggle" onClick={toggleMenu}>
-          {isMenuOpen ? <FaTimes /> : <span>&#9776;</span>} {/* Menu toggle icon */}
+          {isMenuOpen ? <FaTimes /> : <span>&#9776;</span>} 
         </button>
       </div>
     </nav>

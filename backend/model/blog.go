@@ -1,23 +1,18 @@
 package models
 
-import (
-	"time"
+import "time"
 
-	"gorm.io/gorm"
-)
-
+// Blog represents the database model for a blog post
 type Blog struct {
-	ID          uint           `gorm:"primaryKey" json:"id"`
-	Title       string         `json:"title"`
-	Slug        string         `json:"slug"`
-	Image       string         `json:"image"`
-	Description string         `json:"description"`
-	Content     string         `json:"content"`
-	Tags        []string       `gorm:"type:text[]" json:"tags"`
-	Category    string         `json:"category"`
-	Published   bool           `json:"published"`
-	CreatedAt   time.Time      `json:"created_at"`
-	UpdatedAt   time.Time      `json:"updated_at"`
-	DeletedAt   gorm.DeletedAt `gorm:"index" json:"-"`
-	Author      string         `json:"author"`
+	ID          uint      `json:"id" gorm:"primaryKey"`
+	Title       string    `json:"title"`
+	Slug        string    `json:"slug"`
+	ImageURL    string    `json:"image_url"`
+	Description string    `json:"description"`
+	Content     string    `json:"content"`
+	Tags        string    `json:"tags"` // Store as a comma-separated string
+	Category    string    `json:"category"`
+	Published   bool      `json:"published"`
+	Author      string    `json:"author"`
+	CreatedAt   time.Time `json:"created_at"`
 }

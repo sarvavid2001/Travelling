@@ -2,9 +2,9 @@ package controllers
 
 import (
 	"net/http"
-	"your-project/config"
-	"your-project/models"
-	"your-project/services"
+	"travelling/config"
+	models "travelling/model"
+	"travelling/services"
 
 	"github.com/gin-gonic/gin"
 )

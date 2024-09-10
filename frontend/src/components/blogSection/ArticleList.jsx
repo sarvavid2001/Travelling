@@ -1,9 +1,9 @@
 import React from "react";
 import ArticleBanner from "./ArticleBanner"; // Import ArticleBanner component
-import themeImage from "/home/rabinam/Desktop/Travelling/frontend/src/assets/theme.png"; // Import theme image used for all articles
-import temple from "/home/rabinam/Desktop/Travelling/frontend/src/assets/temple.jpg";
-import culture from "/home/rabinam/Desktop/Travelling/frontend/src/assets/villageimage.jpeg";
-import nature from "/home/rabinam/Desktop/Travelling/frontend/src/assets/mountains.jpeg";
+import themeImage from "/src/assets/theme.png"; // Import theme image used for all articles
+import temple from "/src/assets/temple.jpg";
+import culture from "/src/assets/villageimage.jpeg";
+import nature from "/src/assets/mountains.jpeg";
 
 const ArticleList = () => {
   const articles = [
@@ -42,7 +42,7 @@ const ArticleList = () => {
   return (
     <div>
       <div
-        className="text-4xl mb-5"
+        className="text-4xl mb-5 ml-40"
         style={{ fontFamily: "Dancing Script, cursive" }}
       >
         Stories

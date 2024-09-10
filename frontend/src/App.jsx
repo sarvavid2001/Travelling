@@ -20,6 +20,13 @@ function App() {
   const [activeSection, setActiveSection] = useState("");
   const location = useLocation(); // Use useLocation to get the current route
 
+
+   // Scroll to top on route change
+   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
+
+
   // Update the activeSection based on the current path
   useEffect(() => {
     const path = location.pathname;
@@ -64,8 +71,6 @@ function App() {
           <Route path="/blogs/:id" element={<BlogDetails />} />
         </Routes>
 
-        {/* Conditionally render StorySection and Footer based on activeSection */}
-        {activeSection === "story" && <StorySection />}
       </div>
       <Footer />
     </div>

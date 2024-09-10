@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom"; // Import useParams to get the article ID
-import temple from "/home/rabinam/Desktop/Travelling/frontend/src/assets/temple.jpg";
-import culture from "/home/rabinam/Desktop/Travelling/frontend/src/assets/villageimage.jpeg";
-import nature from "/home/rabinam/Desktop/Travelling/frontend/src/assets/mountains.jpeg";
-import themeImage from "/home/rabinam/Desktop/Travelling/frontend/src/assets/theme.png"; 
+import temple from "/src/assets/temple.jpg";
+import culture from "/src/assets/villageimage.jpeg";
+import nature from "/src/assets/mountains.jpeg";
+import themeImage from "/src/assets/theme.png"; 
 
 const articles = [
   {

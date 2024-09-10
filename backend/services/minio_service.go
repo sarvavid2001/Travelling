@@ -11,7 +11,8 @@ import (
 
 	"travelling/config"
 
-	"github.com/minio/minio-go"
+	"github.com/minio/minio-go/v7"
+	"github.com/minio/minio-go/v7/pkg/credentials"
 )
 
 func UploadToMinIO(file multipart.File, fileHeader *multipart.FileHeader) (string, error) {
@@ -30,4 +31,22 @@ func UploadToMinIO(file multipart.File, fileHeader *multipart.FileHeader) (strin
 
 	// Return the MinIO file URL
 	return fmt.Sprintf("http://%s/%s/%s", os.Getenv("MINIO_ENDPOINT"), config.BucketName, filePath), nil
+}
+
+// Initialize MinIO client using environment variables
+func InitializeMinIOClient() (*minio.Client, error) {
+	endpoint := os.Getenv("MINIO_ENDPOINT")
+	accessKeyID := os.Getenv("MINIO_ACCESS_KEY")
+	secretAccessKey := os.Getenv("MINIO_SECRET_KEY")
+	useSSL := false
+
+	minioClient, err := minio.New(endpoint, &minio.Options{
+		Creds:  credentials.NewStaticV4(accessKeyID, secretAccessKey, ""),
+		Secure: useSSL,
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	return minioClient, nil
 }

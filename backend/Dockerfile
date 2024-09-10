@@ -25,6 +25,12 @@ WORKDIR /app
 # Copy the Pre-built binary file from the builder stage
 COPY --from=builder /app/backend .
 
+# Copy the .env file
+COPY .env .env
+
+# Install any additional dependencies if needed (e.g., curl for health checks)
+RUN apk add --no-cache curl
+
 # Expose port 8080 to the outside world
 EXPOSE 8080
 

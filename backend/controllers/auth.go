@@ -1,10 +1,10 @@
-package handlers
+package controllers
 
 import (
 	"database/sql"
-	"github/rabinam24/ecom/internal/models"
 	"log"
 	"net/http"
+	models "travelling/model"
 
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"

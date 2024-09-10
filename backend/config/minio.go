@@ -11,7 +11,7 @@ import (
 )
 
 var MinioClient *minio.Client
-var BucketName = "your-bucket-name"
+var BucketName = "travelling"
 
 func InitMinIO() {
 	var err error

@@ -14,4 +14,17 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      // Ensure image files and other assets are included in the build
+      input: {
+        main: './src/main.jsx',
+      },
+      output: {
+        // Configure how assets are handled if needed
+      },
+    },
+    // Make sure static assets are correctly resolved
+    assetsInlineLimit: 4096, // Example: increase the limit for inline assets if needed
+  },
 });

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"; // Import Link for navigation
 const ArticleBanner = ({ id, image, title, description, link, overlayText, themeImage }) => {
   return (
     <div
-      className="container mx-auto py-10 px-4 sm:px-6 lg:px-8"
+      className="container mx-auto py-10 px-4 sm:px-6 lg:px-20 justify-center"
       style={{
         backgroundImage: `url(${themeImage})`, // Dynamically set the theme image from props
         backgroundSize: 'cover', 

@@ -1,0 +1,190 @@
+/* Base Styles */
+.plan-your-trip {
+    margin: 5rem auto 0 auto;
+    max-width: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    background: linear-gradient(135deg, #e0f7e9, #f4f4ff);
+    border-radius: 20px;
+    flex-wrap: wrap;
+    animation: fadeIn 1.5s ease-out; /* Fade-in effect */
+}
+
+.plan-content {
+    max-width: 50%;
+    margin-right: 2rem;
+    opacity: 0; /* Start with hidden content */
+    animation: fadeIn 1s ease-out 0.5s forwards; /* Delay fade-in effect */
+}
+
+.plan-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2a5634;
+    animation: slideIn 1s ease-out;
+}
+
+.plan-content h2 {
+    font-size: 2rem;
+    color: #3e7c5a;
+    margin-bottom: 1rem;
+    animation: slideIn 1s ease-out 0.2s;
+}
+
+.plan-content p {
+    font-size: 1.2rem;
+    color: #6b8f71;
+    margin-bottom: 2rem;
+    animation: slideIn 1s ease-out 0.4s;
+}
+
+.cta-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform for scale effect */
+}
+
+.cta-button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.plan-image {
+    width: 600px;
+    height: auto;
+    position: relative;
+}
+
+.slick-slider {
+    max-width: 100%;
+}
+
+.slick-dots li button:before {
+    color: #4caf50;
+}
+
+.trip-image {
+    width: 100%;
+    height: 400px; /* Fixed height for uniformity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    animation: slideUp 1s ease-out;
+}
+
+.trip-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.trip-image:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.slick-prev:before, .slick-next:before { 
+    color: #214501; 
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .plan-your-trip {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .plan-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .plan-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .plan-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .plan-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+    }
+
+    .plan-image {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    .slick-slider img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-content h1 {
+        font-size: 2rem;
+    }
+
+    .plan-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .plan-content p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.4rem;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

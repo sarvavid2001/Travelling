@@ -1,0 +1,42 @@
+.skeleton-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  .skeleton {
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .skeleton-title {
+    height: 30px;
+    width: 80%;
+  }
+  
+  .skeleton-subtitle {
+    height: 20px;
+    width: 60%;
+  }
+  
+  .skeleton-content {
+    height: 300px;
+    width: 100%;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -500px 0;
+    }
+    100% {
+      background-position: 500px 0;
+    }
+  }
+  
+  .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 1000px 100%;
+  }
+      

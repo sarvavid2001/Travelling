@@ -1,0 +1,25 @@
+/* Interests.css */
+
+.interests-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .interest-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .interest-item {
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .interest-item:hover {
+    transform: scale(1.05);
+  }
+  

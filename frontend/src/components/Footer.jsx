@@ -20,7 +20,7 @@ const Footer = () => {
               </a>
               <a href="/contact" className="hover:text-gray-400">
                 Contact
-              </a>
+              </a>  
             </nav>
           </div>
 

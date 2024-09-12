@@ -56,3 +56,7 @@ body, html {
   color: #f1faee; /* Light, subtle color */
   margin-top: 0;
 }
+
+.container {
+  flex: 1; /* This makes the container take up all available space, pushing the footer to the bottom */
+}

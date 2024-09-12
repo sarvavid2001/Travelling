@@ -29,17 +29,17 @@ function Navbar({ onSectionClick, activeSection }) {
               Places to Visit
             </Link>
           </li>
-          <li className={activeSection === "tech" ? "active" : ""}>
-            <Link to="/tech" onClick={() => handleLinkClick("tech")}>Tech</Link>
+          <li className={activeSection === "inspirational" ? "active" : ""}>
+            <Link to="/inspirational" onClick={() => handleLinkClick("inspirational")}>Inspirational</Link>
           </li>
           <li className={activeSection === "festival-events" ? "active" : ""}>
             <Link to="/festival-events" onClick={() => handleLinkClick("festival-events")}>Festival and Events</Link>
           </li>
-          <li className={activeSection === "sports" ? "active" : ""}>
-            <Link to="/sports" onClick={() => handleLinkClick("sports")}>Sports</Link>
+          <li className={activeSection === "chill" ? "active" : ""}>
+            <Link to="/chill" onClick={() => handleLinkClick("chill")}>Chill</Link>
           </li>
-          <li className={activeSection === "stories" ? "active" : ""}>
-            <Link to="/stories" onClick={() => handleLinkClick("stories")}>Stories</Link>
+          <li className={activeSection === "plan-your-trip" ? "active" : ""}>
+            <Link to="/planning" onClick={() => handleLinkClick("plan-your-trip")}>Plan Your Trip</Link>
           </li>
           {isMenuOpen && (
             <li className="close-icon" onClick={toggleMenu}>

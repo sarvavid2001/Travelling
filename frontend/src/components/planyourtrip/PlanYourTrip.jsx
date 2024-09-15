@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./planyourtrip.css";
 import Slider from 'react-slick';
 import { useNavigate } from "react-router-dom";
-import planyourtripimage from "/home/rabinam/Desktop/Travelling/frontend/src/assets/planyourtrip.png"; 
-import planyourtriptwo from "/home/rabinam/Desktop/Travelling/frontend/src/assets/plantrip2.png";
+import planyourtripimage from "/src/assets/planyourtrip.png"; 
+import planyourtriptwo from "/src/assets/plantriptwo.png";
 
 const PlanYourTrip = () => {
     const navigate = useNavigate(); // Use navigate
